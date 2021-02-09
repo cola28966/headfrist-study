@@ -1,4 +1,4 @@
-package proxy;
+package proxy.remote;
 
 public class SoldOutState implements State{
 
