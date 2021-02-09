@@ -49,7 +49,7 @@ public class ImageProxy implements Icon {
                     public void run() {
                         try{
                             imageIcon = new ImageIcon(imageURL, "CD Cover");
-                            c.repaint();
+                            c.repaint();//重新调用paintIcon方法
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
