@@ -2,7 +2,7 @@ package proxy;
 
 public class SoldState implements State {
 
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

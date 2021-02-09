@@ -1,6 +1,9 @@
 package proxy;
 
-public class GumballMachine {
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class GumballMachine extends UnicastRemoteObject implements  GumballMachineRemote {
 
     private State soldOutState;
     private State noQuarterState;
@@ -12,7 +15,7 @@ public class GumballMachine {
     private int count = 0;
     private String location;
 
-    public GumballMachine(String location, int count) {
+    public GumballMachine(String location, int count) throws RemoteException {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
